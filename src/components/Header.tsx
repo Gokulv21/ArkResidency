@@ -82,14 +82,25 @@ const Header = () => {
         </nav>
 
         {/* Book Now Button (Desktop) */}
-        <Button
-          variant={isScrolled ? 'gold' : 'heroOutline'}
-          size="sm"
-          className="hidden md:flex"
-          onClick={() => scrollToSection('#enquiry')}
-        >
-          Book Now
-        </Button>
+        {isScrolled ? (
+          <Button
+            variant="gold"
+            size="sm"
+            className="hidden md:flex"
+            onClick={() => scrollToSection('#enquiry')}
+          >
+            Book Now
+          </Button>
+        ) : (
+          <Button
+            variant="heroOutline"
+            size="sm"
+            className="hidden md:flex"
+            onClick={() => scrollToSection('#enquiry')}
+          >
+            Book Now
+          </Button>
+        )}
 
         {/* Mobile Menu Button */}
         <button
