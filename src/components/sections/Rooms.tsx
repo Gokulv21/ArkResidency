@@ -1,77 +1,107 @@
-import { Wifi, Wind, Tv, Car, Coffee, Bath, Users, Maximize } from 'lucide-react';
+import { Wifi, Wind, Tv, Car, Coffee, Bath, Users, Maximize, Home, Building } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import roomDeluxe from '@/assets/room-deluxe.jpg';
-import roomSuite from '@/assets/room-suite.jpg';
-import roomStandard from '@/assets/room-standard.jpg';
+import suiteRoom from '@/assets/suite-room.jpg';
+import familyRoom from '@/assets/family-room.jpg';
+import sharedBathroom from '@/assets/shared-bathroom.jpg';
+import deluxeRoom from '@/assets/deluxe-room.jpg';
 
 interface Amenity {
   icon: React.ReactNode;
   name: string;
 }
 
-interface Room {
+interface RoomType {
   id: number;
   name: string;
   image: string;
   description: string;
-  price: string;
-  size: string;
+  acPrice: string;
+  nonAcPrice: string;
   capacity: string;
+  rooms: string[];
   amenities: Amenity[];
+  hasAc: boolean;
+  hasPrivateBath: boolean;
 }
 
-const rooms: Room[] = [
+const roomTypes: RoomType[] = [
   {
     id: 1,
-    name: 'Standard Room',
-    image: roomStandard,
-    description: 'A cozy retreat perfect for solo travelers or couples seeking comfort and value without compromise.',
-    price: '$120',
-    size: '28 sqm',
-    capacity: '2 Guests',
+    name: 'Suite Room',
+    image: suiteRoom,
+    description: 'Premium suite rooms with modern amenities and spacious design. Perfect for comfort and luxury.',
+    acPrice: '₹4500',
+    nonAcPrice: '₹4000',
+    capacity: '2-4 Guests',
+    rooms: ['101', '102', '201', '202'],
     amenities: [
       { icon: <Wifi size={16} />, name: 'Free WiFi' },
       { icon: <Wind size={16} />, name: 'Air Conditioning' },
       { icon: <Tv size={16} />, name: 'Smart TV' },
+      { icon: <Bath size={16} />, name: 'Private Bathroom' },
       { icon: <Coffee size={16} />, name: 'Coffee Maker' },
     ],
+    hasAc: true,
+    hasPrivateBath: true,
   },
   {
     id: 2,
-    name: 'Deluxe Room',
-    image: roomDeluxe,
-    description: 'Spacious elegance with premium amenities, designed for guests who appreciate the finer details.',
-    price: '$180',
-    size: '42 sqm',
-    capacity: '2 Guests',
+    name: 'Family Room',
+    image: familyRoom,
+    description: 'Spacious family accommodation designed for up to 5 members. Comfortable and family-friendly.',
+    acPrice: '₹4500',
+    nonAcPrice: '₹4000',
+    capacity: '5 Guests',
+    rooms: ['103'],
     amenities: [
       { icon: <Wifi size={16} />, name: 'Free WiFi' },
       { icon: <Wind size={16} />, name: 'Air Conditioning' },
-      { icon: <Tv size={16} />, name: 'Smart TV' },
-      { icon: <Bath size={16} />, name: 'Bathtub' },
-      { icon: <Car size={16} />, name: 'Free Parking' },
+      { icon: <Users size={16} />, name: 'Family Friendly' },
+      { icon: <Bath size={16} />, name: 'Private Bathroom' },
+      { icon: <Home size={16} />, name: 'Extra Space' },
     ],
+    hasAc: true,
+    hasPrivateBath: true,
   },
   {
     id: 3,
-    name: 'Executive Suite',
-    image: roomSuite,
-    description: 'Our most luxurious accommodation featuring a separate living area, perfect for extended stays or special occasions.',
-    price: '$280',
-    size: '65 sqm',
-    capacity: '4 Guests',
+    name: 'Shared Bathroom',
+    image: sharedBathroom,
+    description: 'Budget-friendly rooms with shared bathroom facilities. Clean and comfortable option.',
+    acPrice: 'N/A',
+    nonAcPrice: '₹1500-₹2500',
+    capacity: '2 Guests',
+    rooms: ['107 (1st Floor)', '205 (2nd Floor)'],
+    amenities: [
+      { icon: <Wifi size={16} />, name: 'Free WiFi' },
+      { icon: <Building size={16} />, name: 'Shared Bathroom' },
+      { icon: <Tv size={16} />, name: 'Basic TV' },
+      { icon: <Coffee size={16} />, name: 'Basic Amenities' },
+    ],
+    hasAc: false,
+    hasPrivateBath: false,
+  },
+  {
+    id: 4,
+    name: 'Deluxe Room',
+    image: deluxeRoom,
+    description: 'Comfortable deluxe rooms with private bathroom. Available with or without AC.',
+    acPrice: '₹2500',
+    nonAcPrice: '₹2000',
+    capacity: '2-3 Guests',
+    rooms: ['104', '105', '106', '203', '205'],
     amenities: [
       { icon: <Wifi size={16} />, name: 'Free WiFi' },
       { icon: <Wind size={16} />, name: 'Air Conditioning' },
+      { icon: <Bath size={16} />, name: 'Private Bathroom' },
       { icon: <Tv size={16} />, name: 'Smart TV' },
-      { icon: <Bath size={16} />, name: 'Jacuzzi' },
-      { icon: <Car size={16} />, name: 'Free Parking' },
-      { icon: <Coffee size={16} />, name: 'Mini Bar' },
     ],
+    hasAc: true,
+    hasPrivateBath: true,
   },
 ];
 
-const RoomCard = ({ room }: { room: Room }) => {
+const RoomCard = ({ room }: { room: RoomType }) => {
   const scrollToEnquiry = () => {
     const element = document.querySelector('#enquiry');
     if (element) {
@@ -89,8 +119,9 @@ const RoomCard = ({ room }: { room: Room }) => {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="absolute top-4 right-4 bg-gold text-primary-foreground px-4 py-2 text-sm font-semibold tracking-wide">
-          {room.price}<span className="font-normal text-xs">/night</span>
+        <div className="absolute top-4 right-4 bg-gold text-primary-foreground px-3 py-2 text-xs font-semibold tracking-wide rounded">
+          AC: {room.acPrice}<br />
+          Non-AC: {room.nonAcPrice}
         </div>
       </div>
 
@@ -101,8 +132,8 @@ const RoomCard = ({ room }: { room: Room }) => {
         {/* Room Info */}
         <div className="flex items-center gap-4 text-muted-foreground text-sm mb-4">
           <span className="flex items-center gap-1">
-            <Maximize size={14} />
-            {room.size}
+            <Home size={14} />
+            Rooms: {room.rooms.join(', ')}
           </span>
           <span className="flex items-center gap-1">
             <Users size={14} />
@@ -160,7 +191,7 @@ const Rooms = () => {
 
         {/* Room Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {rooms.map((room) => (
+          {roomTypes.map((room) => (
             <RoomCard key={room.id} room={room} />
           ))}
         </div>

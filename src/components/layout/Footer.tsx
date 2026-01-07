@@ -35,35 +35,35 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <span className="font-serif text-2xl font-semibold tracking-tight">
-                Haven
+                ARK
               </span>
               <span className="font-serif text-lg font-normal italic text-gold-light">
-                Retreat
+                Residency
               </span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-              Experience unparalleled comfort and luxury at Haven Retreat, 
-              where every moment is crafted for your perfect escape.
+              Experience exceptional value and comfort at ARK Residency,
+              where every stay is designed for your perfect comfort.
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
+                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:border-transparent hover:text-white transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
+                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 hover:border-transparent hover:text-white transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
+                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 hover:border-transparent hover:text-white transition-all duration-300"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
@@ -113,16 +113,17 @@ const Footer = () => {
           <div>
             <h4 className="font-serif text-lg mb-6">Contact</h4>
             <div className="space-y-3 text-sm text-primary-foreground/70">
-              <p>123 Serenity Avenue</p>
-              <p>Downtown District, MT 10001</p>
+              <p>13 Gopala Pillaiyar Street</p>
+              <p>(Near Gopala Pillaiyar Temple)</p>
+              <p>Tiruvannamalai-606601</p>
               <p className="pt-2">
-                <a href="tel:+15551234567" className="hover:text-gold transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+919443969359" className="hover:text-gold transition-colors">
+                  +91 94439 69359
                 </a>
               </p>
               <p>
-                <a href="mailto:reservations@havenretreat.com" className="hover:text-gold transition-colors">
-                  reservations@havenretreat.com
+                <a href="mailto:reservations@arkresidency.com" className="hover:text-gold transition-colors">
+                  reservations@arkresidency.com
                 </a>
               </p>
             </div>
@@ -133,7 +134,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/50">
-              © {currentYear} Haven Retreat. All rights reserved.
+              © {currentYear} ARK Residency. All rights reserved.
             </p>
             <p className="text-sm text-primary-foreground/50">
               Designed with elegance in mind.

@@ -4,19 +4,19 @@ const contactInfo = [
   {
     icon: <MapPin className="w-5 h-5" />,
     label: 'Address',
-    value: '123 Serenity Avenue, Downtown District\nMetropolis, MT 10001',
+    value: '13 Gopala Pillaiyar Street\n(Near Gopala Pillaiyar Temple)\nTiruvannamalai-606601',
   },
   {
     icon: <Phone className="w-5 h-5" />,
     label: 'Phone',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567',
+    value: '+91 94439 69359',
+    href: 'tel:+919443969359',
   },
   {
     icon: <Mail className="w-5 h-5" />,
     label: 'Email',
-    value: 'reservations@havenretreat.com',
-    href: 'mailto:reservations@havenretreat.com',
+    value: 'reservations@arkresidency.com',
+    href: 'mailto:reservations@arkresidency.com',
   },
   {
     icon: <Clock className="w-5 h-5" />,
@@ -85,14 +85,14 @@ const Contact = () => {
             </h3>
             <div className="rounded-lg overflow-hidden border border-border h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986432970718!3d40.697149422113014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.8!2d79.0747!3d12.2253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad7c9b1b1b1b1b%3A0x4e4e4e4e4e4e4e4e!2sTiruvannamalai%2C%20Tamil%20Nadu%20606601%2C%20India!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Haven Retreat Location"
+                title="ARK Residency Location"
               />
             </div>
           </div>

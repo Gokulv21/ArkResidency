@@ -51,12 +51,12 @@ const Header = () => {
           <span className={`font-serif text-2xl md:text-3xl font-semibold tracking-tight transition-colors duration-300 ${
             isScrolled ? 'text-foreground' : 'text-primary-foreground'
           }`}>
-            Haven
+            ARK
           </span>
           <span className={`font-serif text-lg md:text-xl font-normal italic transition-colors duration-300 ${
             isScrolled ? 'text-gold' : 'text-gold-light'
           }`}>
-            Retreat
+            Residency
           </span>
         </a>
 

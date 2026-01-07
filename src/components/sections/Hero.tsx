@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Haven Retreat Hotel exterior"
+          alt="Ark Residency exterior"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-charcoal/30 to-charcoal/60" />
@@ -39,16 +39,16 @@ const Hero = () => {
 
           {/* Hotel Name */}
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-6 tracking-tight">
-            Haven Retreat
+            ARK Residency
           </h1>
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-primary-foreground/90 font-light mb-4 tracking-wide">
-            Where Luxury Meets Tranquility
+            Where Comfort Meets Affordability
           </p>
           <p className="text-base md:text-lg text-primary-foreground/70 max-w-xl mx-auto mb-10 leading-relaxed">
-            Experience unparalleled comfort in our boutique hotel, 
-            where every moment is crafted for your perfect escape.
+            Experience exceptional value in our well-maintained residency,
+            where every stay is designed for your perfect comfort.
           </p>
 
           {/* CTA Buttons */}

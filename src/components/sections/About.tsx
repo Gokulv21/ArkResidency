@@ -44,7 +44,7 @@ const About = () => {
               Our Story
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground mt-4 mb-8">
-              About Haven Retreat
+              About ARK Residency
             </h2>
             
             <div className="space-y-6 text-muted-foreground leading-relaxed">

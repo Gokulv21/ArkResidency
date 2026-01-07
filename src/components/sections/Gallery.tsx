@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import roomDeluxe from '@/assets/room-deluxe.jpg';
-import roomSuite from '@/assets/room-suite.jpg';
+import roomDeluxe from '@/assets/deluxe-room.jpg';
+import roomSuite from '@/assets/suite-room.jpg';
 import galleryLobby from '@/assets/gallery-lobby.jpg';
 import galleryPool from '@/assets/gallery-pool.jpg';
 import galleryRestaurant from '@/assets/gallery-restaurant.jpg';
