@@ -49,21 +49,21 @@ const Footer = () => {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:border-transparent hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:border-transparent hover:text-white transition-all duration-1000 ease-in-out"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 hover:border-transparent hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 hover:border-transparent hover:text-white transition-all duration-1000 ease-in-out"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 hover:border-transparent hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 hover:border-transparent hover:text-white transition-all duration-1000 ease-in-out"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
@@ -132,12 +132,9 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-primary-foreground/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/50">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+            <p className="text-sm text-primary-foreground/50 text-center">
               © {currentYear} ARK Residency. All rights reserved.
-            </p>
-            <p className="text-sm text-primary-foreground/50">
-              Designed with elegance in mind.
             </p>
           </div>
         </div>
