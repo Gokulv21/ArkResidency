@@ -38,7 +38,7 @@ const Hero = () => {
           </div>
 
           {/* Hotel Name */}
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-6 tracking-tight">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-6 tracking-light">
             ARK Grand Residency
           </h1>
 
