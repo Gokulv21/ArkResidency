@@ -56,7 +56,7 @@ const Header = () => {
           <span className={`font-serif text-lg md:text-xl font-normal italic transition-colors duration-300 ${
             isScrolled ? 'text-gold' : 'text-gold-light'
           }`}>
-            Residency
+            Grand Residency
           </span>
         </a>
 

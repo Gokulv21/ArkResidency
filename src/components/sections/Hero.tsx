@@ -39,7 +39,7 @@ const Hero = () => {
 
           {/* Hotel Name */}
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-6 tracking-tight">
-            ARK Residency
+            ARK Grand Residency
           </h1>
 
           {/* Tagline */}

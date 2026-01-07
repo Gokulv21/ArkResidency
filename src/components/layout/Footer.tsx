@@ -38,7 +38,7 @@ const Footer = () => {
                 ARK
               </span>
               <span className="font-serif text-lg font-normal italic text-gold-light">
-                Residency
+                Grand Residency
               </span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
