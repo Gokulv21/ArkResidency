@@ -1,39 +1,47 @@
-import { MapPin, Clock, Shield, Sparkles, Users, Leaf } from 'lucide-react';
+import { Church, Building, Route, Utensils, Hospital } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
-const highlights = [
+const nearbyPlaces = [
   {
-    icon: <MapPin className="w-6 h-6" />,
-    title: 'Prime Location',
-    description: 'Situated in the heart of the city with easy access to major attractions, shopping, and dining.',
+    icon: <Church className="w-6 h-6" />,
+    title: 'Boothanarayanan Temple',
+    description: 'Ancient temple dedicated to Lord Subramanya, just a short walk away.',
   },
   {
-    icon: <Sparkles className="w-6 h-6" />,
-    title: 'Clean & Spacious',
-    description: 'Meticulously maintained rooms with generous space for your comfort and relaxation.',
+    icon: <Church className="w-6 h-6" />,
+    title: 'Theradi Muneeshwarar Temple',
+    description: 'Historic Shiva temple known for its architectural beauty.',
   },
   {
-    icon: <Users className="w-6 h-6" />,
-    title: 'Family & Business Friendly',
-    description: 'Whether traveling for leisure or work, we cater to all your needs with dedicated amenities.',
+    icon: <Building className="w-6 h-6" />,
+    title: 'Raja Gopuram',
+    description: 'Magnificent gateway entrance showcasing traditional Tamil architecture.',
   },
   {
-    icon: <Shield className="w-6 h-6" />,
-    title: 'Affordable Luxury',
-    description: 'Experience premium hospitality without the premium price tag. Value meets elegance.',
+    icon: <Route className="w-6 h-6" />,
+    title: 'Girivalam Start & End Point',
+    description: 'Sacred path for circumambulation around the temple complex.',
   },
   {
-    icon: <Clock className="w-6 h-6" />,
-    title: '24/7 Service',
-    description: 'Our dedicated staff is available around the clock to ensure your stay is seamless.',
+    icon: <Utensils className="w-6 h-6" />,
+    title: 'Andhra Mess',
+    description: 'Authentic Andhra cuisine served with traditional flavors.',
   },
   {
-    icon: <Leaf className="w-6 h-6" />,
-    title: 'Eco-Conscious',
-    description: 'Committed to sustainable practices while maintaining the highest standards of comfort.',
+    icon: <Hospital className="w-6 h-6" />,
+    title: 'Rajan Hospital (For Emergency)',
+    description: '24/7 emergency medical care facility nearby for peace of mind.',
   },
 ];
 
+
+
 const About = () => {
+  const { ref: p1Ref, isVisible: p1Visible } = useScrollAnimation<HTMLParagraphElement>();
+  const { ref: p2Ref, isVisible: p2Visible } = useScrollAnimation<HTMLParagraphElement>();
+  const { ref: p3Ref, isVisible: p3Visible } = useScrollAnimation<HTMLParagraphElement>();
+  const { ref: p4Ref, isVisible: p4Visible } = useScrollAnimation<HTMLParagraphElement>();
+
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -46,52 +54,80 @@ const About = () => {
             <h2 className="font-serif text-4xl md:text-5xl text-foreground mt-4 mb-8">
               About ARK Residency
             </h2>
-            
+
             <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p>
-                Nestled in a serene corner of the city, Haven Retreat stands as a 
-                testament to modern luxury and timeless hospitality. Since our 
-                establishment, we have been dedicated to creating memorable 
+              <p
+                ref={p1Ref}
+                className={`transition-all duration-1000 ${
+                  p1Visible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
+                Nestled in a serene corner of the city, Haven Retreat stands as a
+                testament to modern luxury and timeless hospitality. Since our
+                establishment, we have been dedicated to creating memorable
                 experiences for every guest who walks through our doors.
               </p>
-              <p>
-                Our boutique hotel combines contemporary design with warm, 
-                personalized service. Every detail, from the carefully curated 
-                interiors to our thoughtfully selected amenities, has been 
+              <p
+                ref={p2Ref}
+                className={`transition-all duration-1000 delay-200 ${
+                  p2Visible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
+                Our boutique hotel combines contemporary design with warm,
+                personalized service. Every detail, from the carefully curated
+                interiors to our thoughtfully selected amenities, has been
                 designed with your comfort in mind.
               </p>
-              <p>
-                Whether you're here for a romantic getaway, a family vacation, 
-                or a business trip, our team is committed to making your stay 
-                exceptional. We believe that true luxury lies in the details—the 
+              <p
+                ref={p3Ref}
+                className={`transition-all duration-1000 delay-400 ${
+                  p3Visible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
+                Whether you're here for a romantic getaway, a family vacation,
+                or a business trip, our team is committed to making your stay
+                exceptional. We believe that true luxury lies in the details—the
                 crisp linens, the welcoming smile, the perfect cup of morning coffee.
               </p>
-              <p>
-                At Haven Retreat, you're not just a guest; you're part of our 
+              <p
+                ref={p4Ref}
+                className={`transition-all duration-1000 delay-600 ${
+                  p4Visible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
+                At Haven Retreat, you're not just a guest; you're part of our
                 extended family. Welcome home.
               </p>
             </div>
           </div>
 
-          {/* Right Column - Highlights */}
+          {/* Right Column - Nearby Places */}
           <div>
             <h3 className="font-serif text-2xl text-foreground mb-8">
-              Why Choose Us
+              NearBy Places
             </h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              {highlights.map((highlight, index) => (
+              {nearbyPlaces.map((place, index) => (
                 <div
                   key={index}
                   className="group p-6 bg-card rounded-lg border border-border hover:border-gold/30 hover:shadow-card transition-all duration-300"
                 >
                   <div className="text-gold mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {highlight.icon}
+                    {place.icon}
                   </div>
                   <h4 className="font-serif text-lg text-foreground mb-2">
-                    {highlight.title}
+                    {place.title}
                   </h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    {highlight.description}
+                    {place.description}
                   </p>
                 </div>
               ))}

@@ -9,12 +9,8 @@ const Footer = () => {
       { name: 'Rooms', href: '#rooms' },
       { name: 'Gallery', href: '#gallery' },
       { name: 'About', href: '#about' },
+      { name: 'Amenities', href: '#amenities' },
       { name: 'Contact', href: '#contact' },
-    ],
-    policies: [
-      { name: 'Privacy Policy', href: '#' },
-      { name: 'Terms of Service', href: '#' },
-      { name: 'Cancellation Policy', href: '#' },
     ],
   };
 
@@ -30,7 +26,7 @@ const Footer = () => {
   return (
     <footer className="bg-charcoal text-primary-foreground py-16">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
@@ -92,22 +88,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Policies */}
-          <div>
-            <h4 className="font-serif text-lg mb-6">Policies</h4>
-            <ul className="space-y-3">
-              {footerLinks.policies.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/70 hover:text-gold transition-colors text-sm"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          
 
           {/* Contact Info */}
           <div>
